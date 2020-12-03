@@ -1,4 +1,4 @@
 (executable
- (name prob1)
- (libraries base)
+ (name prob2)
+ (libraries base stdio re2)
  (preprocess (pps ppx_jane)))
