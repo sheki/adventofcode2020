@@ -9,7 +9,7 @@ type res =
 let findPair target lst = 
   match lst with
   | [] -> None
-  | s::ss ->  try Some(List.find (fun n -> List.exists (fun a -> a == (target - n)) ss) lst) with Not_found -> None
+  | _::ss ->  try Some(List.find (fun n -> List.exists (fun a -> a == (target - n)) ss) lst) with Not_found -> None
 
 let find x lst = 
   if List.exists (fun a -> a == (2020 - x)) lst then Found ((2020 - x) * x) else Continue (x::lst)
